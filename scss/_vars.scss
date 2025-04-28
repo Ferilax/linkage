@@ -1,0 +1,40 @@
+:root {
+	--text-white: #FFFFFF;
+	--text-grey: #DBDBDB;
+	--text-blue: #5EDBFF;
+	--background: #040606;
+	--purple: #7B61FF;
+	--violet: #7919FF;
+	--header-mobile-background: #161616;
+
+	--z-header-mobile: 300;
+
+	--container-padding: 50px; // header and mobile menu
+	--logo-width: 210px;
+	--header-icon-size: 56px;
+	--header-margin: 40px;
+
+	@media (max-width: 1200px) {
+		--container-padding: 40px
+	}
+
+	@media (max-width: 1023px) {
+		--logo-width: 150px;
+		--container-padding: 30px;
+	}
+
+	@media (max-width: 767px) {
+		--logo-width: 130px;
+		--header-icon-size: 46px;
+		--container-padding: 26px;
+	}
+
+	@media (max-width: 424px) {
+		--header-icon-size: 36px;
+		--container-padding: 20px;
+	}
+
+	@media (max-width: 374px) {
+		--logo-width: 100px;
+	}
+}

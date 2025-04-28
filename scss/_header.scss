@@ -1,0 +1,193 @@
+.header {
+	margin-top: var(--header-margin);
+
+	.container {
+		display: flex;
+		align-items: center;
+	}
+
+	.logo {
+		flex: 0 0 var(--logo-width);
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.nav {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+
+		margin-left: 40px;
+	}
+
+	.contact-us {
+		@extend %button;
+		padding: 0 23px;
+		flex: 0 0 300px;
+
+		margin-left: 22px;
+	}
+
+	.icon {
+		display: flex;
+		flex: 0 0 var(--header-icon-size);
+		height: var(--header-icon-size);
+		width: var(--header-icon-size);
+	}
+
+	.links {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+
+		margin-left: auto;
+
+		&__tel {
+			padding: 0 40px;
+			@extend %button-white;
+		}
+
+		.burger {
+			display: none;
+		}
+	}
+
+	.mobile {
+		display: none;
+	}
+
+	@media (max-width: 1550px) {
+		.nav {
+			display: none;
+		}
+	}
+
+	@media (max-width: 1023px) {
+
+		.desktop {
+			display: none;
+		}
+
+		.mobile {
+			display: flex;
+		}
+
+		.links a,
+		.links button {
+			display: flex;
+		}
+	}
+
+	@media (max-width: 900px) {
+		.contact-us {
+			display: none;
+		}
+
+		.links .burger {
+			display: flex;
+		}
+	}
+
+	@media (max-width: 767px) {
+
+		.links {
+			gap: 12px;
+		}
+	}
+
+	@media (max-width: 374px) {
+		.links {
+			gap: 8px;
+		}
+	}
+}
+
+.menu-mobile {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: var(--z-header-mobile);
+
+	background: var(--header-mobile-background);
+	transform: translateX(-100%);
+	transition: 0.2s;
+
+
+	.container {
+		overflow-y: auto;
+		padding-bottom: 60px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 40px;
+
+		height: 100%;
+	}
+
+	.head {
+		display: flex;
+		justify-content: space-between;
+		margin-top: var(--header-margin);
+	}
+
+	.nav {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		align-items: center;
+
+		line-height: 1.4;
+		font-size: 18px;
+	}
+
+	.icon {
+		display: flex;
+		flex: 0 0 var(--header-icon-size);
+		height: var(--header-icon-size);
+		width: var(--header-icon-size);
+	}
+
+	.logo {
+		flex: 0 0 var(--logo-width);
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.contact-us {
+		@extend %button;
+		padding: 0 50px;
+		margin: auto;
+	}
+
+	.foot {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 40px;
+	}
+
+	.links {
+		display: flex;
+		gap: 40px;
+
+		a {
+			display: flex;
+			flex: 0 0 60px;
+			width: 60px;
+			height: 60px;
+		}
+	}
+
+	@media (max-width: 900px) {
+		&.open {
+			transform: none;
+		}
+	}
+}

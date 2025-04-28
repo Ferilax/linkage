@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "nullstyle";
+@import "vars";
+@import "templates";
+
+@import "header";
+@import "footer";
+@import "main";
+
+body {
+	font-family: Roboto;
+	background: var(--background);
+	color: var(--text-white);
+
+	@media (max-width: 1023px) {
+		&.lock-mobile {
+			overflow: hidden;
+		}
+
+		&.lock {
+			overflow: hidden;
+		}
+	}
+
+}
+
+main {
+	margin-top: 80px;
+}
+
+.container {
+	max-width: 1620px; //1520px
+	padding: 0 50px;
+	margin: 0 auto;
+
+	@media (max-width: 1200px) {
+		padding: 0 40px;
+	}
+
+	@media (max-width: 1023px) {
+		padding: 0 30px;
+	}
+
+	@media (max-width: 767px) {
+		padding: 0 26px;
+	}
+
+	@media (max-width: 424px) {
+		padding: 0 20px;
+	}
+}
