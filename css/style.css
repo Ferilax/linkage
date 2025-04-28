@@ -311,7 +311,8 @@ h6 {
 }
 
 .task {
-  margin: 1px;
+  margin-top: 1px !important;
+  margin-bottom: 1px !important;
   border-radius: 30px;
   padding: 40px;
   position: relative;
@@ -1065,6 +1066,9 @@ h6 {
   gap: 40px;
   overflow: hidden;
 }
+.cases .case.is-active {
+  box-shadow: 0 8px 40px 0 rgba(171, 77, 252, 0.2);
+}
 .cases .case__icon img {
   width: 100%;
 }
@@ -1190,6 +1194,8 @@ h6 {
     z-index: 0;
     padding: 30px;
     gap: 24px;
+    border: none;
+    margin-bottom: 40px;
   }
   .cases .case__list {
     gap: 20px;

@@ -402,6 +402,10 @@
 		gap: 40px;
 		overflow: hidden;
 
+		&.is-active {
+			box-shadow: 0 8px 40px 0 #AB4DFC33;
+		}
+
 		&__icon {
 			img {
 				width: 100%;
@@ -566,6 +570,9 @@
 			z-index: 0;
 			padding: 30px;
 			gap: 24px;
+			border: none;
+
+			margin-bottom: 40px;
 
 			&__list {
 				gap: 20px;
