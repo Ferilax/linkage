@@ -382,3 +382,74 @@
 		}
 	}
 }
+
+.modal {
+	overflow-y: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: var(--z-modal);
+
+	backdrop-filter: blur(10px);
+
+	transition: 0.2s;
+	align-content: center;
+
+	padding: 0 var(--container-padding);
+
+	--padding: 40px;
+
+	visibility: hidden;
+	opacity: 0;
+
+	&.show {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&__body {
+		border-radius: 30px;
+		margin: 40px auto;
+		position: relative;
+		padding: var(--padding);
+		background: var(--header-mobile-background);
+	}
+
+	&__close {
+		display: flex;
+		position: absolute;
+		right: var(--padding);
+		top: var(--padding);
+	}
+
+	@media (max-width: 1439px) {
+		&__body {
+			border-radius: 15px;
+		}
+	}
+
+	@media (max-width: 1023px) {
+		--padding: 30px;
+	}
+
+	@media (max-width: 767px) {
+		--padding: 20px;
+
+		&__close {
+			width: 18px;
+			height: 18px;
+			z-index: 3;
+		}
+	}
+
+	@media (max-width: 424px) {
+		padding: 0;
+
+		&__body {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+}

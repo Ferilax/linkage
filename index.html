@@ -39,7 +39,7 @@
 				</button>
 			</div>
 
-			<button class="contact-us">Оставить заявку</button>
+			<button class="contact-us modal-demo-trigger">Оставить заявку</button>
 		</div>
 	</header>
 
@@ -63,7 +63,7 @@
 			</nav>
 
 			<div class="foot">
-				<button class="contact-us">Оставить заявку</button>
+				<button class="contact-us modal-demo-trigger">Оставить заявку</button>
 
 				<div class="links">
 					<a href="mailto:info@linkage.ru">
@@ -110,7 +110,7 @@
 						Создаём цифрового лидера в каждом сотруднике
 					</div>
 					<div class="buttons">
-						<button class="request">Запросить демо</button>
+						<button class="request modal-demo-trigger">Запросить демо</button>
 						<button class="learn-more">Узнать больше</button>
 					</div>
 				</div>
@@ -267,7 +267,7 @@
 								</label>
 							</div>
 						</div>
-						<button class="send" type="submit">Запросить демо</button>
+						<button class="send modal-demo-trigger" type="submit">Запросить демо</button>
 						<div class="postscript">
 							Нажимая кнопку «Запросить демо» вы соглашаетесь с <a href="">правилами обработки персональных данных</a>
 						</div>
@@ -351,7 +351,7 @@
 								</div>
 							</div>
 
-							<button class="case__send-request">Запросить демо</button>
+							<button class="case__send-request modal-demo-trigger">Запросить демо</button>
 						</div>
 					</article>
 					<article class="case">
@@ -413,7 +413,7 @@
 								</div>
 							</div>
 
-							<button class="case__send-request">Запросить демо</button>
+							<button class="case__send-request modal-demo-trigger">Запросить демо</button>
 						</div>
 					</article>
 					<article class="case">
@@ -475,7 +475,7 @@
 								</div>
 							</div>
 
-							<button class="case__send-request">Запросить демо</button>
+							<button class="case__send-request modal-demo-trigger">Запросить демо</button>
 						</div>
 					</article>
 					<article class="case">
@@ -537,7 +537,7 @@
 								</div>
 							</div>
 
-							<button class="case__send-request">Запросить демо</button>
+							<button class="case__send-request modal-demo-trigger">Запросить демо</button>
 						</div>
 					</article>
 				</div>
@@ -606,7 +606,7 @@
 										</div>
 									</div>
 
-									<button class="case__send-request">Запросить демо</button>
+									<button class="case__send-request modal-demo-trigger">Запросить демо</button>
 								</div>
 							</article>
 							<article class="case splide__slide">
@@ -668,7 +668,7 @@
 										</div>
 									</div>
 
-									<button class="case__send-request">Запросить демо</button>
+									<button class="case__send-request modal-demo-trigger">Запросить демо</button>
 								</div>
 							</article>
 							<article class="case splide__slide">
@@ -730,7 +730,7 @@
 										</div>
 									</div>
 
-									<button class="case__send-request">Запросить демо</button>
+									<button class="case__send-request modal-demo-trigger">Запросить демо</button>
 								</div>
 							</article>
 							<article class="case splide__slide">
@@ -792,7 +792,7 @@
 										</div>
 									</div>
 
-									<button class="case__send-request">Запросить демо</button>
+									<button class="case__send-request modal-demo-trigger">Запросить демо</button>
 								</div>
 							</article>
 						</div>
@@ -836,9 +836,6 @@
 						</div>
 						<span class="task__numero">4</span>
 					</article>
-				</div>
-
-				<div class="flex">
 					<article class="task">
 						<div class="task__name">Гибридное размещение</div>
 						<div class="task__text">
@@ -1010,7 +1007,7 @@
 				</section>
 
 				<div class="buttons">
-					<button class="demo-request">Запросить демо</button>
+					<button class="demo-request modal-demo-trigger">Запросить демо</button>
 					<button class="learn-more">Узнать больше</button>
 				</div>
 			</div>
@@ -1214,7 +1211,7 @@
 				</section>
 
 				<div class="buttons">
-					<button class="demo-request">Запросить демо</button>
+					<button class="demo-request modal-demo-trigger">Запросить демо</button>
 					<button class="learn-more">Узнать больше</button>
 				</div>
 			</div>
@@ -1797,10 +1794,10 @@
 						<div class="input">
 							<div class="input__label">Ваш телефон</div>
 							<label>
-								<input type="text" placeholder="+7 999 900 00 00">
+								<input type="tel" inputmode="tel" placeholder="+7 999 900 00 00">
 							</label>
 						</div>
-						<button class="demo-request">Запросить демо</button>
+						<button class="demo-request modal-demo-trigger">Запросить демо</button>
 					</div>
 					<div class="postscript">
 						Нажимая кнопку «Запросить демо» вы соглашаетесь с <a href="">правилами обработки персональных данных</a>
@@ -1856,6 +1853,62 @@
 		</div>
 	</footer>
 
+	<section class="modal" id="modal-request">
+		<div class="modal__body">
+			<button class="modal__close">
+				<svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M21.9453 0C22.4899 6.05168e-05 23.0124 0.216468 23.3975 0.601562C23.7825 0.986697 23.999 1.50909 23.999 2.05371C23.999 2.59834 23.7825 3.12072 23.3975 3.50586L15.4053 11.498L23.3975 19.4902C23.5883 19.6807 23.7394 19.9072 23.8428 20.1562C23.9461 20.4054 24 20.6727 24 20.9424C24 21.2121 23.9461 21.4794 23.8428 21.7285C23.7395 21.9776 23.5883 22.204 23.3975 22.3945C22.5941 23.1979 21.2759 23.1978 20.4932 22.415L12.4502 14.3721L4.4248 22.3984C4.03967 22.7835 3.51727 23 2.97266 23C2.42806 22.9999 1.9056 22.7835 1.52051 22.3984C1.13543 22.0133 0.918957 21.4909 0.918945 20.9463C0.918945 20.4017 1.13544 19.8793 1.52051 19.4941L9.5127 11.502L1.52051 3.50977C1.32966 3.31931 1.17856 3.09278 1.0752 2.84375C0.971867 2.59466 0.918009 2.32729 0.917969 2.05762C0.917969 1.78788 0.971858 1.52064 1.0752 1.27148C1.17851 1.02241 1.32968 0.795979 1.52051 0.605469C2.32385 -0.197877 3.64206 -0.197787 4.4248 0.584961L12.4668 8.62695L20.4932 0.601562C20.8783 0.216489 21.4007 -4.76127e-08 21.9453 0Z"
+						fill="white" />
+				</svg>
+			</button>
+			<div class="content">
+				<div class="title">Оставить заявку</div>
+				<div class="text">
+					Заполните личные данные и наши специалисты свяжутся с вами в ближайшее время. Не
+					является публичной офертой
+				</div>
+
+				<div class="grid">
+					<div class="input">
+						<div class="input__label">Ваше имя</div>
+						<label>
+							<input type="text" placeholder="Укажите имя">
+						</label>
+					</div>
+					<div class="input">
+						<div class="input__label">Компания</div>
+						<label>
+							<input type="text" placeholder="Название организации">
+						</label>
+					</div>
+					<div class="input">
+						<div class="input__label">E-mail</div>
+						<label>
+							<input type="email" inputmode="email" placeholder="Почта">
+						</label>
+					</div>
+					<div class="input">
+						<div class="input__label">Ваш телефон</div>
+						<label>
+							<input type="tel" inputmode="tel" placeholder="+7 999 900 00 00">
+						</label>
+					</div>
+					<div class="input">
+						<div class="input__label">Комментарий</div>
+						<label>
+							<input type="text" inputmode="email" placeholder="Введите текст">
+						</label>
+					</div>
+				</div>
+				<button class="submit">Отправить</button>
+				<div class="postscript">
+					Нажимая кнопку «Отправить» вы соглашаетесь с <a href="">правилами обработки персональных данных</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
 	<script src="js/splide/splide.min.js"></script>
 	<script src="js/splide/splide-extension-grid.min.js"></script>
@@ -1864,6 +1917,7 @@
 	<script src="js/header.js"></script>
 	<script src="js/sliders.js"></script>
 	<script src="js/cases.js"></script>
+	<script src="js/modals.js"></script>
 </body>
 
 </html>

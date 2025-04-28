@@ -24,6 +24,10 @@ body {
 		}
 	}
 
+	&.modal-opened {
+		overflow: hidden;
+	}
+
 }
 
 main {
