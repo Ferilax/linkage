@@ -20,6 +20,8 @@
 		gap: 20px;
 
 		margin-left: 40px;
+		margin-right: 20px;
+		flex-wrap: wrap
 	}
 
 	.contact-us {
@@ -45,7 +47,7 @@
 		margin-left: auto;
 
 		&__tel {
-			padding: 0 40px;
+			min-width: 220px;
 			@extend %button-white;
 		}
 
@@ -58,9 +60,17 @@
 		display: none;
 	}
 
-	@media (max-width: 1550px) {
+	@media (max-width: 1300px) {
 		.nav {
 			display: none;
+		}
+
+		.contact-us {
+			display: none;
+		}
+
+		.links .burger {
+			display: flex;
 		}
 	}
 
@@ -76,16 +86,6 @@
 
 		.links a,
 		.links button {
-			display: flex;
-		}
-	}
-
-	@media (max-width: 900px) {
-		.contact-us {
-			display: none;
-		}
-
-		.links .burger {
 			display: flex;
 		}
 	}
@@ -115,7 +115,6 @@
 	background: var(--header-mobile-background);
 	transform: translateX(-100%);
 	transition: 0.2s;
-
 
 	.container {
 		overflow-y: auto;
@@ -185,7 +184,7 @@
 		}
 	}
 
-	@media (max-width: 900px) {
+	@media (max-width: 1300px) {
 		&.open {
 			transform: none;
 		}

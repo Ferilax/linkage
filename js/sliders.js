@@ -82,6 +82,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		padding: "calc((100vw - 100%) / 2)",
 		gap: "40px",
 		autoWidth: "true",
+		autoplay: true,
+		type: "loop",
+		clones: 0,
+		pauseOnHover: false,
+		interval: 3000,
 		breakpoints: {
 			1023: {
 				gap: "20px",
@@ -97,6 +102,12 @@ document.addEventListener("DOMContentLoaded", function () {
 		padding: "calc((100vw - 100%) / 2)",
 		gap: "40px",
 		autoWidth: "true",
+		autoplay: true,
+		pauseOnHover: false,
+		resetProgress: false,
+		type: "loop",
+		clones: 0,
+		interval: 3000,
 		direction: "rtl",
 		breakpoints: {
 			1023: {
@@ -108,7 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		},
 	});
 	partnersSplide2.mount();
-
 
 	let implementationServicesSplide = new Splide("#implementation-services-splide", {
 		gap: "calc((100% - 540px * 5) / 4)",

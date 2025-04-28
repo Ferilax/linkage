@@ -571,6 +571,8 @@ h6 {
   align-items: center;
   gap: 20px;
   margin-left: 40px;
+  margin-right: 20px;
+  flex-wrap: wrap;
 }
 .header .contact-us {
   padding: 0 23px;
@@ -590,7 +592,7 @@ h6 {
   margin-left: auto;
 }
 .header .links__tel {
-  padding: 0 40px;
+  min-width: 220px;
 }
 .header .links .burger {
   display: none;
@@ -598,9 +600,15 @@ h6 {
 .header .mobile {
   display: none;
 }
-@media (max-width: 1550px) {
+@media (max-width: 1300px) {
   .header .nav {
     display: none;
+  }
+  .header .contact-us {
+    display: none;
+  }
+  .header .links .burger {
+    display: flex;
   }
 }
 @media (max-width: 1023px) {
@@ -612,14 +620,6 @@ h6 {
   }
   .header .links a,
   .header .links button {
-    display: flex;
-  }
-}
-@media (max-width: 900px) {
-  .header .contact-us {
-    display: none;
-  }
-  .header .links .burger {
     display: flex;
   }
 }
@@ -699,7 +699,7 @@ h6 {
   width: 60px;
   height: 60px;
 }
-@media (max-width: 900px) {
+@media (max-width: 1300px) {
   .menu-mobile.open {
     transform: none;
   }
@@ -1340,9 +1340,7 @@ h6 {
 .advantage .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-  row-gap: 46px;
+  gap: 20px;
   margin-top: 60px;
 }
 .advantage .task:nth-child(5) {
