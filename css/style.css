@@ -1336,6 +1336,9 @@ h6 {
   }
 }
 
+.linkage-products {
+  background: url("../img/line.png") bottom center/cover;
+}
 .linkage-products .title {
   text-align: center;
 }
@@ -1363,6 +1366,9 @@ h6 {
   }
 }
 @media (max-width: 1350px) {
+  .linkage-products {
+    background: none;
+  }
   .linkage-products #linkage-products-splide {
     border-radius: unset;
     margin: 0 calc(var(--container-padding) * -1);
@@ -1630,6 +1636,9 @@ h6 {
   }
 }
 
+.digital-manager {
+  background: url("../img/line.png") bottom center/cover;
+}
 .digital-manager .title {
   text-align: center;
 }
@@ -1717,6 +1726,9 @@ h6 {
   }
 }
 @media (max-width: 1023px) {
+  .digital-manager {
+    background: url("../img/line.png") top -80px center/cover;
+  }
   .digital-manager .grid {
     display: none;
   }

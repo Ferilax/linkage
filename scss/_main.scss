@@ -750,6 +750,7 @@
 
 .linkage-products {
 	@extend %section;
+	background: url("../img/line.png") bottom center /cover;
 
 	.title {
 		@extend %h1;
@@ -787,6 +788,8 @@
 	}
 
 	@media (max-width: 1350px) {
+		background: none;
+
 		#linkage-products-splide {
 			border-radius: unset;
 			margin: 0 calc(var(--container-padding) * -1);
@@ -1128,6 +1131,7 @@
 
 .digital-manager {
 	@extend %section;
+	background: url("../img/line.png") bottom center /cover;
 
 	.title {
 		@extend %h1;
@@ -1226,6 +1230,7 @@
 	}
 
 	@media (max-width: 1200px) {
+
 		.grid {
 			grid-template-columns: repeat(2, 1fr);
 		}
@@ -1236,6 +1241,7 @@
 	}
 
 	@media (max-width: 1023px) {
+		background: url("../img/line.png") top -80px center /cover;
 
 		.grid {
 			display: none;
