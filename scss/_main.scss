@@ -723,7 +723,7 @@
 	}
 
 	@media (max-width: 1023px) {
-		margin-top: 120px;
+		margin-top: 80px;
 
 		#advantage-splide {
 			display: block;
@@ -877,6 +877,12 @@
 			margin-top: 30px;
 		}
 
+		#partners-splide-2 {
+			.splide__slide {
+				margin-bottom: 40px;
+			}
+		}
+
 		.splide__slide {
 			width: 280px;
 			border-radius: 15px;
@@ -899,7 +905,7 @@
 }
 
 .implementation-services {
-	@extend %section;
+	margin-top: 230px;
 
 	.title {
 		@extend %h1;
@@ -976,7 +982,12 @@
 		}
 	}
 
+	@media (max-width: 1300px) {
+		margin-top: 130px;
+	}
+
 	@media (max-width: 1023px) {
+		margin-top: 80px;
 
 		#implementation-services-splide {
 			margin-top: 20px;

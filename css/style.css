@@ -256,16 +256,16 @@ h6 {
   box-shadow: 0 0 176px 5px rgba(171, 77, 252, 0.4784313725);
 }
 
-.form, .architecture, .digital-manager, .about-linkage, .implementation-services, .partners, .linkage-products, .cases, .footer {
+.form, .architecture, .digital-manager, .about-linkage, .partners, .linkage-products, .cases, .footer {
   margin-top: 260px;
 }
 @media (max-width: 1300px) {
-  .form, .architecture, .digital-manager, .about-linkage, .implementation-services, .partners, .linkage-products, .cases, .footer {
+  .form, .architecture, .digital-manager, .about-linkage, .partners, .linkage-products, .cases, .footer {
     margin-top: 160px;
   }
 }
 @media (max-width: 1023px) {
-  .form, .architecture, .digital-manager, .about-linkage, .implementation-services, .partners, .linkage-products, .cases, .footer {
+  .form, .architecture, .digital-manager, .about-linkage, .partners, .linkage-products, .cases, .footer {
     margin-top: 120px;
   }
 }
@@ -1314,7 +1314,7 @@ h6 {
 }
 @media (max-width: 1023px) {
   .advantage {
-    margin-top: 120px;
+    margin-top: 80px;
   }
   .advantage #advantage-splide {
     display: block;
@@ -1430,6 +1430,9 @@ h6 {
   .partners #partners-splide-1 {
     margin-top: 30px;
   }
+  .partners #partners-splide-2 .splide__slide {
+    margin-bottom: 40px;
+  }
   .partners .splide__slide {
     width: 280px;
     border-radius: 15px;
@@ -1448,6 +1451,9 @@ h6 {
   }
 }
 
+.implementation-services {
+  margin-top: 230px;
+}
 .implementation-services .title {
   text-align: center;
 }
@@ -1510,7 +1516,15 @@ h6 {
     font-size: 20px;
   }
 }
+@media (max-width: 1300px) {
+  .implementation-services {
+    margin-top: 130px;
+  }
+}
 @media (max-width: 1023px) {
+  .implementation-services {
+    margin-top: 80px;
+  }
   .implementation-services #implementation-services-splide {
     margin-top: 20px;
   }
