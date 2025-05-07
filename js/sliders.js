@@ -86,36 +86,19 @@ document.addEventListener("DOMContentLoaded", function () {
 	})
 	linkageProcuctsSplide.mount();
 
-	createSwiper("#partners-splide-1", {
+	new Splide("#partners-splide-1", {
 		padding: "calc((100vw - 100%) / 2)",
 		gap: "40px",
 		autoWidth: "true",
-		autoplay: true,
-		type: "loop",
-		clones: 0,
-		pauseOnHover: false,
-		interval: 3000,
-		breakpoints: {
-			1023: {
-				gap: "20px",
-			},
-			767: {
-				gap: "10px",
-			},
-		},
-	});
 
-	createSwiper("#partners-splide-2", {
-		padding: "calc((100vw - 100%) / 2)",
-		gap: "40px",
-		autoWidth: "true",
-		autoplay: true,
+		drag: "free",
 		pauseOnHover: false,
-		resetProgress: false,
-		type: "loop",
-		clones: 0,
-		interval: 3000,
-		direction: "rtl",
+		autoScroll: {
+			speed: 1,
+			pauseOnHover: false,
+			rewind: true,
+		},
+
 		breakpoints: {
 			1023: {
 				gap: "20px",
@@ -124,7 +107,32 @@ document.addEventListener("DOMContentLoaded", function () {
 				gap: "10px",
 			},
 		},
-	});
+	}).mount(window.splide.Extensions);
+
+
+	new Splide("#partners-splide-2", {
+		padding: "calc((100vw - 100%) / 2)",
+		gap: "40px",
+		autoWidth: "true",
+		direction: "rtl",
+
+		drag: "free",
+		pauseOnHover: false,
+		autoScroll: {
+			speed: 1,
+			pauseOnHover: false,
+			rewind: true,
+		},
+
+		breakpoints: {
+			1023: {
+				gap: "20px",
+			},
+			767: {
+				gap: "10px",
+			},
+		},
+	}).mount(window.splide.Extensions);
 
 	const servicesSlideCount = document.querySelectorAll("#implementation-services-splide .splide__slide").length; // Высчитываем количество слайдов
 	let implementationServicesSplide = new Splide("#implementation-services-splide", {

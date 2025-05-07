@@ -420,6 +420,7 @@
 
 	&__close {
 		display: flex;
+		z-index: 2;
 		position: absolute;
 		right: var(--padding);
 		top: var(--padding);

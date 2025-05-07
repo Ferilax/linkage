@@ -14,8 +14,13 @@ function menuHandler(action) {
 
 burgerButton.addEventListener("click", () => {
 	menuHandler("open");
-})
+});
 
 closeMenuButton.addEventListener("click", () => {
 	menuHandler("close");
-})
+});
+
+menuMobile.addEventListener("click", (e) => {
+	const clickedLink = e.target.closest(".nav a");
+	menuHandler("close");
+});

@@ -520,6 +520,7 @@ h6 {
 }
 .modal__close {
   display: flex;
+  z-index: 2;
   position: absolute;
   right: var(--padding);
   top: var(--padding);
@@ -1520,6 +1521,9 @@ h6 {
   z-index: -1;
   background: linear-gradient(to bottom, #54567C, rgba(84, 86, 124, 0), #282B60);
 }
+.partners .splide__slide img {
+  width: 50%;
+}
 @media (max-width: 1023px) {
   .partners #partners-splide-1 {
     margin-top: 30px;
@@ -1542,9 +1546,6 @@ h6 {
     width: 164px;
     margin-bottom: 10px;
     margin-top: 1px;
-  }
-  .partners .splide__slide img {
-    transform: scale(0.65);
   }
 }
 
@@ -2533,6 +2534,7 @@ body {
   font-family: Roboto;
   background: var(--background);
   color: var(--text-white);
+  scroll-behavior: smooth;
 }
 @media (max-width: 1023px) {
   body.lock-mobile {
@@ -2548,6 +2550,9 @@ body.modal-opened {
 
 main {
   margin-top: 80px;
+}
+main > section {
+  scroll-margin-top: 40px;
 }
 
 .container {

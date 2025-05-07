@@ -13,6 +13,7 @@ body {
 	font-family: Roboto;
 	background: var(--background);
 	color: var(--text-white);
+	scroll-behavior: smooth;
 
 	@media (max-width: 1023px) {
 		&.lock-mobile {
@@ -32,6 +33,10 @@ body {
 
 main {
 	margin-top: 80px;
+
+	>section {
+		scroll-margin-top: 40px;
+	}
 }
 
 .container {
