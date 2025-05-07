@@ -257,16 +257,16 @@ h6 {
   box-shadow: 0 0 176px 5px rgba(171, 77, 252, 0.4784313725);
 }
 
-.form, .architecture, .digital-manager, .about-linkage, .partners, .linkage-products, .cases, .footer {
+.form, .architecture, .digital-manager, .about-linkage, .partners, .cases, .footer {
   margin-top: 260px;
 }
 @media (max-width: 1300px) {
-  .form, .architecture, .digital-manager, .about-linkage, .partners, .linkage-products, .cases, .footer {
+  .form, .architecture, .digital-manager, .about-linkage, .partners, .cases, .footer {
     margin-top: 160px;
   }
 }
 @media (max-width: 1023px) {
-  .form, .architecture, .digital-manager, .about-linkage, .partners, .linkage-products, .cases, .footer {
+  .form, .architecture, .digital-manager, .about-linkage, .partners, .cases, .footer {
     margin-top: 120px;
   }
 }
@@ -388,6 +388,7 @@ h6 {
   box-shadow: 12px 0 10px 0 rgba(0, 0, 0, 0.2509803922);
   border: 1px solid rgba(84, 86, 124, 0.5411764706);
   text-align: left;
+  cursor: pointer;
 }
 .product-card.is-next {
   z-index: -1;
@@ -903,6 +904,7 @@ h6 {
     max-width: unset;
   }
   .start .video {
+    width: 100%;
     flex: unset;
   }
   .start .text {
@@ -1114,6 +1116,9 @@ h6 {
 .cases .box {
   position: relative;
   margin-top: 60px;
+}
+.cases .bold {
+  font-weight: bold;
 }
 .cases #case-splide {
   display: none;
@@ -1408,6 +1413,7 @@ h6 {
 }
 
 .linkage-products {
+  margin-top: 80px;
   background: url("../img/line.png") bottom center/cover;
 }
 .linkage-products .title {
@@ -1446,7 +1452,15 @@ h6 {
     margin-top: 40px;
   }
 }
+@media (max-width: 1300px) {
+  .linkage-products {
+    margin-top: 0;
+  }
+}
 @media (max-width: 1023px) {
+  .linkage-products {
+    margin-top: 120px;
+  }
   .linkage-products #linkage-products-splide {
     margin-top: 20px;
   }
@@ -1491,6 +1505,9 @@ h6 {
   box-shadow: 0 8px 40px 0 rgba(171, 77, 252, 0.2);
   margin-bottom: 30px;
   margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .partners .splide__slide::after {
   content: "";
@@ -1577,6 +1594,9 @@ h6 {
   height: 8px;
   background: white;
   border-radius: 50%;
+}
+.implementation-services .product-card__title {
+  margin: 0;
 }
 @media (min-width: 1351px) {
   .implementation-services .buttons {

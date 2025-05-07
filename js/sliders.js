@@ -4,7 +4,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		pagination: false,
 	}
 
-	let taskSplide = new Splide("#task-splide", {
+	function createSwiper(swiperSelector, options) {
+		const hasSwiper = !!document.querySelector(swiperSelector);
+		if (hasSwiper) {
+			let splide = new Splide(swiperSelector, options);
+			splide.mount();
+		}
+	}
+
+	createSwiper("#task-splide", {
 		padding: "var(--container-padding)",
 		gap: "20px",
 		perPage: 2,
@@ -15,9 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		},
 	});
-	taskSplide.mount();
 
-	let caseSplide = new Splide("#case-splide", {
+	createSwiper("#case-splide", {
 		padding: "var(--container-padding)",
 		gap: "20px",
 		perPage: 1,
@@ -27,9 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		},
 	});
-	caseSplide.mount();
 
-	let advantageSplide = new Splide("#advantage-splide", {
+	createSwiper("#advantage-splide", {
 		padding: "var(--container-padding)",
 		gap: "20px",
 		perPage: 2,
@@ -40,19 +46,20 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		},
 	});
-	advantageSplide.mount();
 
+	const productsSlideCount = document.querySelectorAll("#linkage-products-splide .splide__slide").length; // Высчитываем количество слайдов
 	let linkageProcuctsSplide = new Splide("#linkage-products-splide", {
-		gap: "calc((100% - 540px * 3) / 2)",
-		perPage: 3,
-		speed: 800,
+		gap: `calc((100% - 540px * ${productsSlideCount}) / ${productsSlideCount - 1})`,
+		perPage: productsSlideCount,
+		speed: 500,
 		easing: "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
 		drag: false,
 		updateOnMove: true,
 		type: "loop",
 		cloneStatus: false,
-		focus: 2,
+		focus: productsSlideCount - 1,
 		direction: "rtl",
+		waitForTransition: true,
 
 		breakpoints: {
 			1350: {
@@ -66,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				perPage: 2,
 				padding: "var(--container-padding)",
 				updateOnMove: false,
+				waitForTransition: false,
 			},
 			900: {
 				perPage: 1,
@@ -74,11 +82,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		},
 	});
 	linkageProcuctsSplide.on("click", (slide) => {
-		linkageProcuctsSplide.go(slide.index);
+		linkageProcuctsSplide.go("<");
 	})
 	linkageProcuctsSplide.mount();
 
-	let partnersSplide1 = new Splide("#partners-splide-1", {
+	createSwiper("#partners-splide-1", {
 		padding: "calc((100vw - 100%) / 2)",
 		gap: "40px",
 		autoWidth: "true",
@@ -96,9 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			},
 		},
 	});
-	partnersSplide1.mount();
 
-	let partnersSplide2 = new Splide("#partners-splide-2", {
+	createSwiper("#partners-splide-2", {
 		padding: "calc((100vw - 100%) / 2)",
 		gap: "40px",
 		autoWidth: "true",
@@ -118,19 +125,20 @@ document.addEventListener("DOMContentLoaded", function () {
 			},
 		},
 	});
-	partnersSplide2.mount();
 
+	const servicesSlideCount = document.querySelectorAll("#implementation-services-splide .splide__slide").length; // Высчитываем количество слайдов
 	let implementationServicesSplide = new Splide("#implementation-services-splide", {
-		gap: "calc((100% - 540px * 5) / 4)",
-		perPage: 5,
-		speed: 800,
+		gap: `calc((100% - 540px * ${servicesSlideCount}) / ${servicesSlideCount - 1})`,
+		perPage: servicesSlideCount,
+		speed: 500,
 		easing: "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
 		drag: false,
 		updateOnMove: true,
 		type: "loop",
 		cloneStatus: false,
-		focus: 4,
+		focus: servicesSlideCount - 1,
 		direction: "rtl",
+		waitForTransition: true,
 
 		breakpoints: {
 			1350: {
@@ -144,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				perPage: 2,
 				padding: "var(--container-padding)",
 				updateOnMove: false,
+				waitForTransition: false,
 			},
 			900: {
 				perPage: 1,
@@ -152,11 +161,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		},
 	});
 	implementationServicesSplide.on("click", (slide) => {
-		implementationServicesSplide.go(slide.index);
+		implementationServicesSplide.go("<");
 	})
 	implementationServicesSplide.mount();
 
-	let aboutLinkageSplide = new Splide("#about-linkage-splide", {
+	createSwiper("#about-linkage-splide", {
 		padding: "calc((100vw - 100%) / 2)",
 		gap: "40px",
 		autoWidth: "true",
@@ -172,9 +181,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			},
 		},
 	});
-	aboutLinkageSplide.mount();
 
-	let digitalManagerSplide = new Splide("#digital-manager-splide", {
+	createSwiper("#digital-manager-splide", {
 		padding: "var(--container-padding)",
 		gap: "20px",
 		perPage: 2,
@@ -185,5 +193,4 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		},
 	});
-	digitalManagerSplide.mount();
 });

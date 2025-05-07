@@ -117,6 +117,7 @@
 		}
 
 		.video {
+			width: 100%;
 			flex: unset;
 		}
 
@@ -382,6 +383,10 @@
 	.box {
 		position: relative;
 		margin-top: 60px;
+	}
+
+	.bold {
+		font-weight: bold;
 	}
 
 	#case-splide {
@@ -759,7 +764,7 @@
 }
 
 .linkage-products {
-	@extend %section;
+	margin-top: 80px;
 	background: url("../img/line.png") bottom center /cover;
 
 	.title {
@@ -807,7 +812,12 @@
 		}
 	}
 
+	@media (max-width: 1300px) {
+		margin-top: 0;
+	}
+
 	@media (max-width: 1023px) {
+		margin-top: 120px;
 
 		#linkage-products-splide {
 			margin-top: 20px;
@@ -871,6 +881,10 @@
 		box-shadow: 0 8px 40px 0 #AB4DFC33;
 		margin-bottom: 30px;
 		margin-top: 10px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
 		&::after {
 			content: "";
@@ -974,6 +988,12 @@
 			height: 8px;
 			background: white;
 			border-radius: 50%;
+		}
+	}
+
+	.product-card {
+		&__title {
+			margin: 0;
 		}
 	}
 
