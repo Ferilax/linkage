@@ -22,5 +22,5 @@ closeMenuButton.addEventListener("click", () => {
 
 menuMobile.addEventListener("click", (e) => {
 	const clickedLink = e.target.closest(".nav a");
-	menuHandler("close");
+	if (clickedLink) menuHandler("close");
 });

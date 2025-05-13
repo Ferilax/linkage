@@ -9,7 +9,7 @@ let casesCounter = 0;
 
 // Задаем контейнеру высоту карточки, чтобы при манипуляциях с высотой, нас не швыряло вверх
 function setCasesBoxHeight() {
-	const activeCaseHeight = getComputedStyle(cases[casesCounter]).height
+	const activeCaseHeight = getComputedStyle(cases[casesCounter]).height;
 	casesBox.style.minHeight = activeCaseHeight;
 }
 
@@ -176,5 +176,3 @@ nextCaseButton.addEventListener("click", () => {
 window.addEventListener("resize", () => {
 	setCasesBoxHeight();
 })
-
-animate

@@ -1004,7 +1004,7 @@ h6 {
 .opportunities .flex {
   margin-top: 60px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 40px;
 }
 .opportunities .left {
@@ -1067,9 +1067,6 @@ h6 {
   }
 }
 @media (max-width: 1100px) {
-  .opportunities .video {
-    height: 615px;
-  }
   .opportunities .flex {
     margin-top: 40px;
     grid-template-columns: 1fr;
