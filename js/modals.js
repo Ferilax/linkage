@@ -1,25 +1,63 @@
+const CLASSES = {
+	MODAL: ".modal",
+	MODAL_BODY: ".modal__body",
+	MODAL_CLOSE: ".modal__close",
+	MODAL_REQUEST: "#modal-request",
+	MODAL_REQUEST_TRIGGER: ".modal-demo-trigger",
+	MODAL_SUCCESS: "#modal-success",
+	ACTIVE: "show",
+	BODY_ACTIVE: "modal-opened",
+}
+
 function showModal(trigger, modal) {
 	if (trigger) {
-		document.body.classList.add("modal-opened");
+		document.body.classList.add(CLASSES.BODY_ACTIVE);
 		modal.classList.add("show");
 	}
 }
 
-document.addEventListener("click", e => {
-	// Показывать модалку
-	const modalDemo = document.querySelector("#modal-request");
-	const triggerDemo = e.target.closest(".modal-demo-trigger");
-	showModal(triggerDemo, modalDemo);
+function closeModal(modalSelector) {
+	const modal = document.querySelector(modalSelector);
 
-	// Прятать модалку при клике вне
-	const modal = e.target.closest(".modal");
-	const modalContent = e.target.closest(".modal__body");
-	const closeButton = e.target.closest(".modal__close");
+	document.body.classList.remove(CLASSES.BODY_ACTIVE);
+	modal.classList.remove(CLASSES.ACTIVE);
+}
 
-	if (!modal) return; // Если нет модалки то останавливать
+function createModal(modalSelector, triggerSelector) {
+	document.addEventListener("click", e => {
+		// Показывать модалку
+		const modal = document.querySelector(modalSelector);
+		const trigger = e.target.closest(triggerSelector);
+		showModal(trigger, modal);
 
-	if (!modalContent || closeButton) {
-		modal.classList.remove("show");
-		document.body.classList.remove("modal-opened");
-	}
+		// Прятать модалку при клике вне
+		const clickedModal = e.target.closest(CLASSES.MODAL);
+		const modalContent = e.target.closest(CLASSES.MODAL_BODY);
+		const closeButton = e.target.closest(CLASSES.MODAL_CLOSE);
+		const closeTrigger = e.target.closest(`${CLASSES.MODAL} .close`);
+
+		if (!clickedModal) return; // Если нет модалки то останавливать
+
+		if (!modalContent || closeButton || closeTrigger) {
+			clickedModal.classList.remove(CLASSES.ACTIVE);
+			document.body.classList.remove(CLASSES.BODY_ACTIVE);
+		}
+	});
+};
+
+createModal(CLASSES.MODAL_REQUEST, CLASSES.MODAL_REQUEST_TRIGGER);
+
+// Скрываем при удачном заполнении формы, для выведения последующей модалки 
+const form = document.querySelector(`${CLASSES.MODAL_REQUEST} form`);
+form.addEventListener("submit", e => {
+	e.preventDefault();
+	closeModal(CLASSES.MODAL_REQUEST);
+
+	const modalSubmit = document.querySelector(CLASSES.MODAL_SUCCESS)
+	showModal(true, modalSubmit);
+
+	const inputs = form.querySelectorAll("input");
+	inputs.forEach(input => {
+		input.value = "";
+	});
 });

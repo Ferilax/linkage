@@ -172,7 +172,7 @@ h6 {
   background: #040606;
 }
 
-.about-linkage .subscribe,
+#modal-success .close, .about-linkage .subscribe,
 .about-linkage .learn-more, .implementation-services .learn-more, .linkage-products .learn-more, .start .learn-more, .header .links__tel {
   border: 2px solid white;
   border-radius: 100px;
@@ -525,19 +525,36 @@ h6 {
   right: var(--padding);
   top: var(--padding);
 }
+.modal__title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
 @media (max-width: 1439px) {
   .modal__body {
     border-radius: 15px;
+  }
+}
+@media (max-width: 1400px) {
+  .modal__title {
+    font-size: 32px;
   }
 }
 @media (max-width: 1023px) {
   .modal {
     --padding: 30px;
   }
+  .modal__title {
+    font-size: 26px;
+  }
 }
 @media (max-width: 767px) {
   .modal {
     --padding: 20px;
+  }
+  .modal__title {
+    font-size: 20px;
+    font-weight: 500;
   }
   .modal__close {
     width: 18px;
@@ -2442,11 +2459,6 @@ h6 {
   position: relative;
   z-index: 1;
 }
-#modal-request .title {
-  font-size: 36px;
-  font-weight: 700;
-  text-align: center;
-}
 #modal-request .text {
   margin-top: 24px;
   font-size: 20px;
@@ -2483,17 +2495,11 @@ h6 {
     grid-template-columns: 1fr;
     background-image: unset;
   }
-  #modal-request .title {
-    font-size: 32px;
-  }
   #modal-request .grid {
     row-gap: 16px;
   }
 }
 @media (max-width: 1023px) {
-  #modal-request .title {
-    font-size: 26px;
-  }
   #modal-request .grid {
     margin-top: 16px;
   }
@@ -2506,9 +2512,6 @@ h6 {
   }
 }
 @media (max-width: 767px) {
-  #modal-request .title {
-    font-size: 20px;
-  }
   #modal-request .grid {
     grid-template-columns: 1fr;
   }
@@ -2524,6 +2527,32 @@ h6 {
   }
   #modal-request .text {
     font-size: 14px;
+  }
+}
+
+#modal-success .modal__body {
+  height: 756px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  background: url("../img/line.png") 50%/cover #161616;
+}
+#modal-success .close {
+  padding: 0 73px;
+}
+@media (max-width: 1023px) {
+  #modal-success .modal__body {
+    height: 617px;
+  }
+}
+@media (max-width: 767px) {
+  #modal-success .modal__body {
+    gap: 16px;
+  }
+  #modal-success .close {
+    width: 100%;
   }
 }
 
