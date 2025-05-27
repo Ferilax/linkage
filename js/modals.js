@@ -53,8 +53,7 @@ form.addEventListener("submit", e => {
 	e.preventDefault();
 	closeModal(CLASSES.MODAL_REQUEST);
 
-	const modalSubmit = document.querySelector(CLASSES.MODAL_SUCCESS)
-	showModal(true, modalSubmit);
+	showModal(true, document.querySelector(CLASSES.MODAL_SUCCESS));
 
 	const inputs = form.querySelectorAll("input");
 	inputs.forEach(input => {
